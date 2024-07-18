@@ -29,6 +29,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 🔥 Recent News
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+- [*2024.06*] I will join Tianyi e-Commerce Limited as a research intern.
 - [*2024.01*] Our paper [GraphPAR](https://arxiv.org/pdf/2402.12161) is accepted to WWW 2024.
 
 # 📝 Selected Publications 
@@ -54,5 +55,5 @@ My research interest includes neural machine translation and computer vision. I 
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
-# 💻 Internships
-- *2024.06 - now*, Tianyi e-Commerce Limited, Research intern (Large language model).
+# 💻 Experiences
+- *2024.06 - now*, Tianyi e-Commerce Limited, Research intern (Large Language Models).
