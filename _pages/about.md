@@ -40,6 +40,10 @@ My research interest includes neural machine translation and computer vision. I 
 - Data-centric graph learning: A survey
   - Yuxin Guo, Deyu Bo, Cheng Yang, Zhiyuan Lu, <u>Zhongjian Zhang</u>, Jixi Liu, Yufei Peng, Chuan Shi
   - arXiv'24 \[[Paper](https://arxiv.org/pdf/2310.04987)\|[Blog](https://mp.weixin.qq.com/s/it15sa5TO0suZk2hj_Fkhw)\]
+ 
+- Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?
+  - <u>Zhongjian Zhang</u>, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
+  - arXiv'24 \[[Paper](https://arxiv.org/pdf/2408.08685)\]
 
 
 
