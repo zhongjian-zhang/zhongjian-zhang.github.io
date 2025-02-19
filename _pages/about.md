@@ -18,46 +18,47 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 # 👨🏻‍🎓 About Me
-I am a Ph.D. student in the Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). 
+Hello everyone, my name is Zhongjian Zhang. Currently, I am a second-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). 
 
-My research interests primary focus on deep learning on graphs.
+My research interests primary focus on trustworthy graph machine learning and large language models.  Specifically, my current research is mainly about the development of **graph foundation model**.
 
-<!-- Before joining NUS, I received my B.S. in the School of Computer Science at Fudan University, supervised by [Prof. Yang Chen](https://chenyang03.wordpress.com/).
+<span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please contact me via email.</span>
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
+**Contact Information**
 
+- Email: zhangzj@bupt.edu.cn
+- Wechat: zxc1957787636
 
-# 🔥 Recent News
-<!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-- [*2024.06*] I will join Tianyi e-Commerce Limited as a research intern.
+# 🔥 News
+- [*2024.12*] Our paper [Spattack](https://arxiv.org/pdf/2501.03301) is accepted to AAAI 2025.
+- [*2024.11*] Our paper [LLM4RGNN](https://arxiv.org/pdf/2408.08685) is accepted to KDD 2025.
+- [*2024.06*] I will join China Telecommunications Corporation as a research intern.
 - [*2024.01*] Our paper [GraphPAR](https://arxiv.org/pdf/2402.12161) is accepted to WWW 2024.
 
-# 📝 Selected Publications 
-- Endowing Pre-trained Graph Models with Provable Fairness
-  - <u>Zhongjian Zhang</u>, Mengmei Zhang, Yue Yu, Cheng Yang, Jiawei Liu, Chuan Shi
+# 📝 Publications 
+
+- Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks? (<span style="color: red;">CCF-A</span>)
+  - **Zhongjian Zhang**, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
+  - KDD'25 \[[Paper](https://arxiv.org/pdf/2408.08685)\]\|[Blog](https://mp.weixin.qq.com/s/P8e1n310Z08FJa65QGSjhQ)\|[Code](https://github.com/zhongjian-zhang/LLM4RGNN)\]
+
+- Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective (<span style="color: red;">CCF-A</span>)
+  - **Zhongjian Zhang**, Mengmei Zhang, Xiao Wang, Lingjuan Lyu, Bo Yan, Junping Du, Chuan Shi
+  - AAAI'25 \[[Paper](https://arxiv.org/pdf/2501.03301)\|[Blog](https://mp.weixin.qq.com/s/5aicBY3UM9rv8KpDXYLrXQ)\|[Code](https://github.com/zhongjian-zhang/Spattack)\]
+
+- Endowing Pre-trained Graph Models with Provable Fairness (<span style="color: red;">CCF-A</span>)
+  - **Zhongjian Zhang**, Mengmei Zhang, Yue Yu, Cheng Yang, Jiawei Liu, Chuan Shi
   - WWW'24 \[[Paper](https://arxiv.org/pdf/2402.12161)\|[Blog](https://mp.weixin.qq.com/s/MUjScRy3FMxAHXIyuRqX5Q)\|[Code](https://github.com/BUPT-GAMMA/GraphPAR)\]
 
 - Data-centric graph learning: A survey
-  - Yuxin Guo, Deyu Bo, Cheng Yang, Zhiyuan Lu, <u>Zhongjian Zhang</u>, Jixi Liu, Yufei Peng, Chuan Shi
-  - arXiv'24 \[[Paper](https://arxiv.org/pdf/2310.04987)\|[Blog](https://mp.weixin.qq.com/s/it15sa5TO0suZk2hj_Fkhw)\]
- 
-- Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?
-  - <u>Zhongjian Zhang</u>, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
-  - arXiv'24 \[[Paper](https://arxiv.org/pdf/2408.08685)\]
+  - Yuxin Guo, Deyu Bo, Cheng Yang, Zhiyuan Lu, **Zhongjian Zhang**, Jixi Liu, Yufei Peng, Chuan Shi
+  - IEEE TBD'24 \[[Paper](https://arxiv.org/pdf/2310.04987)\|[Blog](https://mp.weixin.qq.com/s/it15sa5TO0suZk2hj_Fkhw)\]
 
 
-
-
-<!-- # 🎖 Honors and Awards -->
-<!-- - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-
-<!-- # 📖 Educations -->
-<!-- - *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-
-
-<!-- # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
+# 💬 Talks
+- *2025.01*, Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective, Invited Online Talk at AITIME. \[[video](https://www.bilibili.com/video/BV1oGcEe6Eeq)\]
+- *2024.12*, Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?, Invited Online Talk at AITIME. \[[video](https://www.bilibili.com/video/BV1uC6JY2E8U/)\]
 
 # 💻 Experiences
-- *2024.06 - now*, Tianyi e-Commerce Limited, Research intern (Large Language Models).
+- *2024.06 - 2025.01*, China Telecommunications Corporation, China
+  - Research intern: Financial Risk Service
+  - Mentor: [Mengmei Zhang](https://scholar.google.com/citations?hl=zh-CN&user=8Qokm1IAAAAJ)

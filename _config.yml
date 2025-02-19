@@ -21,7 +21,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Zhongjian Zhang <br> 张中健"
+  name             : "<div style='text-align: center;'>Zhongjian Zhang<br>张中健</div>"
   avatar           : "images/android-chrome-512x512.png"
   bio              : ""
   location         : "China"
