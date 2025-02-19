@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# 👨🏻‍🎓 About Me
+[//]: # (# 👨🏻‍🎓 About Me)
 Hello everyone, my name is Zhongjian Zhang. Currently, I am a second-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). 
 
 My research interests primary focus on trustworthy graph machine learning and large language models.  Specifically, my current research is mainly about the development of **graph foundation model**.
@@ -30,10 +30,10 @@ My research interests primary focus on trustworthy graph machine learning and la
 - Wechat: zxc1957787636
 
 # 🔥 News
-- [*2024.12*] Our paper [Spattack](https://arxiv.org/pdf/2501.03301) is accepted to AAAI 2025.
-- [*2024.11*] Our paper [LLM4RGNN](https://arxiv.org/pdf/2408.08685) is accepted to KDD 2025.
-- [*2024.06*] I will join China Telecommunications Corporation as a research intern.
-- [*2024.01*] Our paper [GraphPAR](https://arxiv.org/pdf/2402.12161) is accepted to WWW 2024.
+- [*2024.12*] 🎉 Our paper [Spattack](https://arxiv.org/pdf/2501.03301) is accepted to AAAI 2025.
+- [*2024.11*] 🎉 Our paper [LLM4RGNN](https://arxiv.org/pdf/2408.08685) is accepted to KDD 2025.
+- [*2024.06*] 💼 I join China Telecommunications Corporation as a research intern.
+- [*2024.01*] 🎉 Our paper [GraphPAR](https://arxiv.org/pdf/2402.12161) is accepted to WWW 2024.
 
 # 📝 Publications 
 
