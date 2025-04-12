@@ -37,15 +37,15 @@ My research interests primary focus on trustworthy graph machine learning and la
 
 # 📝 Publications 
 
-- Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks? (<span style="color: red;">CCF-A</span>)
+- Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks? (**<span style="color: red;">CCF-A</span>**)
   - **Zhongjian Zhang**, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
   - KDD'25 \[[Paper](https://arxiv.org/pdf/2408.08685)\]\|[Blog](https://mp.weixin.qq.com/s/P8e1n310Z08FJa65QGSjhQ)\|[Code](https://github.com/zhongjian-zhang/LLM4RGNN)\]
 
-- Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective (<span style="color: red;">CCF-A</span>)
+- Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective (**<span style="color: red;">CCF-A</span>**)
   - **Zhongjian Zhang**, Mengmei Zhang, Xiao Wang, Lingjuan Lyu, Bo Yan, Junping Du, Chuan Shi
   - AAAI'25 \[[Paper](https://arxiv.org/pdf/2501.03301)\|[Blog](https://mp.weixin.qq.com/s/5aicBY3UM9rv8KpDXYLrXQ)\|[Code](https://github.com/zhongjian-zhang/Spattack)\]
 
-- Endowing Pre-trained Graph Models with Provable Fairness (<span style="color: red;">CCF-A</span>)
+- Endowing Pre-trained Graph Models with Provable Fairness (**<span style="color: red;">CCF-A</span>**)
   - **Zhongjian Zhang**, Mengmei Zhang, Yue Yu, Cheng Yang, Jiawei Liu, Chuan Shi
   - WWW'24 \[[Paper](https://arxiv.org/pdf/2402.12161)\|[Blog](https://mp.weixin.qq.com/s/MUjScRy3FMxAHXIyuRqX5Q)\|[Code](https://github.com/BUPT-GAMMA/GraphPAR)\]
 
