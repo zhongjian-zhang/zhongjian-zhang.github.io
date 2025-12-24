@@ -18,9 +18,9 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 [//]: # (# 👨🏻‍🎓 About Me)
-Hello everyone, my name is Zhongjian Zhang. Currently, I am a second-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). 
+Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). 
 
-My research interests primary focus on trustworthy graph machine learning and large language models.  Specifically, my current research is mainly about the development of **graph foundation model**.
+My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of **graph foundation model**.
 
 <span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please contact me via email.</span>
 
@@ -30,6 +30,10 @@ My research interests primary focus on trustworthy graph machine learning and la
 - Wechat: zxc1957787636
 
 # 🔥 News
+- [*2025.12*] 💼  I join the Hong Kong University of Science and Technology (Guangzhou) as a research intern, supervised by [Prof. Jia Li](https://sites.google.com/view/lijia).
+- [*2025.12*] 🎉 My research is supported by the CAS Youth Talent Training Program for PhD Students.
+- [*2025.10*] 🎉 I receive the National PhD Scholarship from the Ministry of Education of China.
+- [*2025.04*] 🎉 My research is supported by the BUPT Excellent PhD Students Foundation: CX20251005.
 - [*2024.12*] 🎉 Our paper [Spattack](https://arxiv.org/pdf/2501.03301) is accepted to AAAI 2025.
 - [*2024.11*] 🎉 Our paper [LLM4RGNN](https://arxiv.org/pdf/2408.08685) is accepted to KDD 2025.
 - [*2024.06*] 💼 I join China Telecommunications Corporation as a research intern.
@@ -59,6 +63,10 @@ My research interests primary focus on trustworthy graph machine learning and la
 - *2024.12*, Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks?, Invited Online Talk at AITIME. \[[video](https://www.bilibili.com/video/BV1uC6JY2E8U/)\]
 
 # 💻 Experiences
-- *2024.06 - 2025.01*, China Telecommunications Corporation, China
+- *2024.06 - 2025.02*, China Telecommunications Corporation, China
   - Research intern: Financial Risk Service
   - Mentor: [Mengmei Zhang](https://scholar.google.com/citations?hl=zh-CN&user=8Qokm1IAAAAJ)
+
+- *2025.12 - Now*, Hong Kong University of Science and Technology (Guangzhou), China
+  - Research intern: Graph Foundation Model, Large Language Model
+  - Mentor: [Jia Li](https://sites.google.com/view/lijia)
