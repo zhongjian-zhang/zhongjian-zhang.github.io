@@ -271,3 +271,20 @@ h1:before, .anchor:before {
 [data-theme="dark"] .greedy-nav {
     background-color: #16213e;
 }
+
+/* Awards list - year right aligned */
+.award-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.award-year {
+    flex-shrink: 0;
+    margin-left: 1em;
+    color: #666;
+}
+
+[data-theme="dark"] .award-year {
+    color: #999;
+}

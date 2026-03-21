@@ -18,13 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 [//]: # (# 👨🏻‍🎓 About Me)
-Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). 
-
-My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of **graph foundation model**.
-
-<span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please contact me via email.</span>
-
-**Contact Information**
+Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of **graph foundation model**. <span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please feel free to contact me via:</span>
 
 - Email: zhangzj@bupt.edu.cn
 - Wechat: zxc1957787636
@@ -42,30 +36,43 @@ My research interests primary focus on large language models and trustworthy gra
 
 # 📝 Publications
 
-- FRiskGPT: A Generative Foundation Model for Financial Risk Detection (**<span style="color: red;">CCF-A</span>**)
-  - **Zhongjian Zhang**, Mengmei Zhang, Dehua Xu, Rongjun Shi, Jianfeng Liu, Fuli Meng, Huajian Xu, Xiao Wang, Ruijia Wang, Junze Chen, Minwei Tang, Chuan Shi
-  - WWW'26. Deployed in China Telecom "BestPay" Risk Control System.
+1. FRiskGPT: A Generative Foundation Model for Financial Risk Detection (**<span style="color: red;">CCF-A</span>**)
+   - **Zhongjian Zhang**, Mengmei Zhang, Dehua Xu, Rongjun Shi, Jianfeng Liu, Fuli Meng, Huajian Xu, Xiao Wang, Ruijia Wang, Junze Chen, Minwei Tang, Chuan Shi
+   - WWW'26. Deployed in China Telecom "BestPay" Risk Control System.
 
-- Toward Graph-Tokenizing Large Language Models with Reconstructive Graph Instruction Tuning (**<span style="color: red;">CCF-A</span>**)
-  - **Zhongjian Zhang**, Xiao Wang, Mengmei Zhang, Jiarui Tan, Chuan Shi
-  - WWW'26 \[[Paper](https://arxiv.org/abs/2603.01385)\]\|[Code](https://github.com/zhongjian-zhang/RGLM)\]
+2. Toward Graph-Tokenizing Large Language Models with Reconstructive Graph Instruction Tuning (**<span style="color: red;">CCF-A</span>**)
+   - **Zhongjian Zhang**, Xiao Wang, Mengmei Zhang, Jiarui Tan, Chuan Shi
+   - WWW'26 \[[Paper](https://arxiv.org/abs/2603.01385)\]\|[Code](https://github.com/zhongjian-zhang/RGLM)\]
 
-- Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks? (**<span style="color: red;">CCF-A</span>**)
-  - **Zhongjian Zhang**, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
-  - KDD'25 \[[Paper](https://arxiv.org/pdf/2408.08685)\]\|[Blog](https://mp.weixin.qq.com/s/P8e1n310Z08FJa65QGSjhQ)\|[Code](https://github.com/zhongjian-zhang/LLM4RGNN)\]
+3. Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks? (**<span style="color: red;">CCF-A</span>**)
+   - **Zhongjian Zhang**, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
+   - KDD'25 \[[Paper](https://arxiv.org/pdf/2408.08685)\]\|[Blog](https://mp.weixin.qq.com/s/P8e1n310Z08FJa65QGSjhQ)\|[Code](https://github.com/zhongjian-zhang/LLM4RGNN)\]
 
-- Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective (**<span style="color: red;">CCF-A</span>**)
-  - **Zhongjian Zhang**, Mengmei Zhang, Xiao Wang, Lingjuan Lyu, Bo Yan, Junping Du, Chuan Shi
-  - AAAI'25 \[[Paper](https://arxiv.org/pdf/2501.03301)\|[Blog](https://mp.weixin.qq.com/s/5aicBY3UM9rv8KpDXYLrXQ)\|[Code](https://github.com/zhongjian-zhang/Spattack)\]
+4. Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective (**<span style="color: red;">CCF-A</span>**)
+   - **Zhongjian Zhang**, Mengmei Zhang, Xiao Wang, Lingjuan Lyu, Bo Yan, Junping Du, Chuan Shi
+   - AAAI'25 \[[Paper](https://arxiv.org/pdf/2501.03301)\|[Blog](https://mp.weixin.qq.com/s/5aicBY3UM9rv8KpDXYLrXQ)\|[Code](https://github.com/zhongjian-zhang/Spattack)\]
 
-- Endowing Pre-trained Graph Models with Provable Fairness (**<span style="color: red;">CCF-A</span>**)
-  - **Zhongjian Zhang**, Mengmei Zhang, Yue Yu, Cheng Yang, Jiawei Liu, Chuan Shi
-  - WWW'24 \[[Paper](https://arxiv.org/pdf/2402.12161)\|[Blog](https://mp.weixin.qq.com/s/MUjScRy3FMxAHXIyuRqX5Q)\|[Code](https://github.com/BUPT-GAMMA/GraphPAR)\]
+5. Endowing Pre-trained Graph Models with Provable Fairness (**<span style="color: red;">CCF-A</span>**)
+   - **Zhongjian Zhang**, Mengmei Zhang, Yue Yu, Cheng Yang, Jiawei Liu, Chuan Shi
+   - WWW'24 \[[Paper](https://arxiv.org/pdf/2402.12161)\|[Blog](https://mp.weixin.qq.com/s/MUjScRy3FMxAHXIyuRqX5Q)\|[Code](https://github.com/BUPT-GAMMA/GraphPAR)\]
 
-- Data-centric graph learning: A survey
-  - Yuxin Guo, Deyu Bo, Cheng Yang, Zhiyuan Lu, **Zhongjian Zhang**, Jixi Liu, Yufei Peng, Chuan Shi
-  - IEEE TBD'24 \[[Paper](https://arxiv.org/pdf/2310.04987)\|[Blog](https://mp.weixin.qq.com/s/it15sa5TO0suZk2hj_Fkhw)\]
+6. Data-centric graph learning: A survey
+   - Yuxin Guo, Deyu Bo, Cheng Yang, Zhiyuan Lu, **Zhongjian Zhang**, Jixi Liu, Yufei Peng, Chuan Shi
+   - IEEE TBD'24 \[[Paper](https://arxiv.org/pdf/2310.04987)\|[Blog](https://mp.weixin.qq.com/s/it15sa5TO0suZk2hj_Fkhw)\]
 
+# 🏆 Honors and Awards
+{: .awards-list}
+
+1. <span class="award-item"><span class="award-title">CAST PhD Support Program, Youth Talent Development Initiative</span><span class="award-year">2025</span></span>
+2. <span class="award-item"><span class="award-title">National PhD Scholarship, Ministry of Education of China</span><span class="award-year">2025</span></span>
+3. <span class="award-item"><span class="award-title">BUPT Excellent Ph.D. Students Foundation (CX20251005)</span><span class="award-year">2025</span></span>
+4. <span class="award-item"><span class="award-title">Outstanding Graduate Student, Beijing University of Posts and Telecommunications</span><span class="award-year">2024</span></span>
+5. <span class="award-item"><span class="award-title">First-class Scholarship, Beijing University of Posts and Telecommunications</span><span class="award-year">2023</span></span>
+6. <span class="award-item"><span class="award-title">Outstanding Student of Shandong Province (Top 0.5%)</span><span class="award-year">2022</span></span>
+7. <span class="award-item"><span class="award-title">2nd Prize, 13th Lanqiao Cup National Finals, Java Software Development</span><span class="award-year">2022</span></span>
+8. <span class="award-item"><span class="award-title">2nd Prize, National Final of Shandong Data Innovation Competition (Team Leader)</span><span class="award-year">2021</span></span>
+9. <span class="award-item"><span class="award-title">1st Prize, Challenge Cup Shandong Province (Team Leader)</span><span class="award-year">2021</span></span>
+10. <span class="award-item"><span class="award-title">Shandong Provincial Government Scholarship (Top 0.5%)</span><span class="award-year">2021</span></span>
 
 # 💬 Talks
 - *2025.01*, Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective, Invited Online Talk at AITIME. \[[video](https://www.bilibili.com/video/BV1oGcEe6Eeq)\]
