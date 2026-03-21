@@ -89,6 +89,7 @@
     display: block;
     width: auto;
     height: auto;
+    text-align: center;
   }
 
   img {
@@ -99,6 +100,7 @@
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid $border-color;
+      margin: 0 auto;
     }
   }
 }
@@ -116,6 +118,7 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
   }
 }
 
@@ -163,6 +166,7 @@
 
   @include breakpoint($large) {
     display: block;
+    text-align: center;
   }
 
   button {
@@ -190,13 +194,14 @@
   cursor: default;
 
   @include breakpoint($large) {
-    display: block;
+    display: inline-block;
     position: relative;
     margin: 0;
     padding: 0;
     border: 0;
     background: transparent;
     box-shadow: none;
+    text-align: left;
   }
 
   &:before {

@@ -30,6 +30,7 @@ My research interests primary focus on large language models and trustworthy gra
 - Wechat: zxc1957787636
 
 # 🔥 News
+- [*2026.03*] 🎉 Our papers [FRiskGPT]() and [RGLM](https://arxiv.org/abs/2603.01385) are accepted to WWW 2026.
 - [*2025.12*] 💼  I join the Hong Kong University of Science and Technology (Guangzhou) as a research intern, supervised by [Prof. Jia Li](https://sites.google.com/view/lijia).
 - [*2025.12*] 🎉 My research is supported by the CAS Youth Talent Training Program for PhD Students.
 - [*2025.10*] 🎉 I receive the National PhD Scholarship from the Ministry of Education of China.
@@ -39,7 +40,15 @@ My research interests primary focus on large language models and trustworthy gra
 - [*2024.06*] 💼 I join China Telecommunications Corporation as a research intern.
 - [*2024.01*] 🎉 Our paper [GraphPAR](https://arxiv.org/pdf/2402.12161) is accepted to WWW 2024.
 
-# 📝 Publications 
+# 📝 Publications
+
+- FRiskGPT: A Generative Foundation Model for Financial Risk Detection (**<span style="color: red;">CCF-A</span>**)
+  - **Zhongjian Zhang**, Mengmei Zhang, Dehua Xu, Rongjun Shi, Jianfeng Liu, Fuli Meng, Huajian Xu, Xiao Wang, Ruijia Wang, Junze Chen, Minwei Tang, Chuan Shi
+  - WWW'26. Deployed in China Telecom "BestPay" Risk Control System.
+
+- Toward Graph-Tokenizing Large Language Models with Reconstructive Graph Instruction Tuning (**<span style="color: red;">CCF-A</span>**)
+  - **Zhongjian Zhang**, Xiao Wang, Mengmei Zhang, Jiarui Tan, Chuan Shi
+  - WWW'26 \[[Paper](https://arxiv.org/abs/2603.01385)\]\|[Code](https://github.com/zhongjian-zhang/RGLM)\]
 
 - Can Large Language Models Improve the Adversarial Robustness of Graph Neural Networks? (**<span style="color: red;">CCF-A</span>**)
   - **Zhongjian Zhang**, Xiao Wang, Huichi Zhou, Yue Yu, Mengmei Zhang, Cheng Yang, Chuan Shi
