@@ -288,3 +288,14 @@ h1:before, .anchor:before {
 [data-theme="dark"] .award-year {
     color: #999;
 }
+
+/* Ensure ClustrMaps globe is clickable */
+.sidebar li script + * {
+    pointer-events: auto;
+}
+
+#clstr_globe canvas,
+#clstr_globe embed,
+#clustr_globe object {
+    pointer-events: auto;
+}
