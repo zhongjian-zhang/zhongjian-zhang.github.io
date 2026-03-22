@@ -51,4 +51,19 @@ darkModeToggle.addEventListener('click', () => {
         darkModeIcon.classList.replace('fa-moon', 'fa-sun');
     }
 });
+
+// BibTeX Copy Function
+function copyBibtex(button) {
+    const bibtexId = button.getAttribute('data-bibtex');
+    const bibtexContent = document.getElementById(bibtexId).innerText;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        button.classList.add('copied');
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('copied');
+        }, 2000);
+    });
+}
 </script>

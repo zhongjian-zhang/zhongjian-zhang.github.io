@@ -299,3 +299,32 @@ h1:before, .anchor:before {
 #clustr_globe object {
     pointer-events: auto;
 }
+
+/* BibTeX Button */
+.bibtex-btn {
+    display: inline;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.bibtex-btn:hover {
+    text-decoration: underline;
+}
+
+.bibtex-btn.copied {
+    color: #4CAF50;
+}
+
+.bibtex-content {
+    display: none;
+}
+
+[data-theme="dark"] .bibtex-btn {
+    color: inherit;
+}
