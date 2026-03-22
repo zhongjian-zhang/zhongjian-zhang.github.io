@@ -322,9 +322,8 @@ h1:before, .anchor:before {
 }
 
 .bibtex-content {
-    display: none;
-}
-
-[data-theme="dark"] .bibtex-btn {
-    color: inherit;
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
 }
