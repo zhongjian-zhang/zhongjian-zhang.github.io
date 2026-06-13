@@ -17,10 +17,10 @@
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">
       {% if site.description %}
-        <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
+        <li class="author__identity"><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
       {% endif %}
       {% if author.location %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+        <li class="author__contact-item"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
       {% endif %}
       {% if author.employer %}
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
@@ -29,8 +29,11 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+        <li class="author__contact-item"><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
       {% endif %}
+      <li class="author__contact-item">
+        <a href="#wechat-qr-modal" class="wechat-qr-trigger"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i> Wechat</a>
+      </li>
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
       {% endif %}
@@ -65,10 +68,10 @@
         <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
       {% endif %}
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        <li class="author__contact-item"><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       {% endif %}
       {% if author.orcid %}
-        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw"></i> ORCID</a></li>
+        <li class="author__contact-item"><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw"></i> ORCID</a></li>
       {% endif %}
       {% if author.stackoverflow %}
         <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
@@ -107,16 +110,41 @@
         <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine" aria-hidden="true"></i> Vine</a></li>
       {% endif %}
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+        <li class="author__contact-item"><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw"></i> Scholar</a></li>
       {% endif %}
-      <li>
+      <li class="author__contact-item">
         <i class="fas fa-fw fa-chart-line" style="color: inherit;"></i>
         <span id="busuanzi_container_site_pv">Visits: <span id="busuanzi_value_site_pv"></span></span>
       </li>
-      <li style="margin-top: 15px;">
-        <a href="https://clustrmaps.com/site/1bw4i" target="_blank" title="Visitor Map" style="display: block;">
-          <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=AO8X99KxrEqsL-LR3iWNqjq3ZpZ16KrRQQvH0RyMc-M"></script>
-        </a>
+      <li class="visitor-map-widget" style="margin-top: 15px;">
+        <style>
+          .visitor-map-widget,
+          .visitor-map-widget *,
+          .visitor-map-widget *:hover,
+          .visitor-map-widget *:focus,
+          .visitor-map-widget *:focus-visible,
+          .visitor-map-widget *:active {
+            outline: none !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
+          }
+          .visitor-map-widget a,
+          .visitor-map-widget img {
+            border: 0 !important;
+          }
+        </style>
+        <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=G6lQw4EiIgWrEwcK85Zjd7wq7FDH5APYDSQ3dq0BSWw"></script>
+        <script>
+          document.addEventListener('click', function(event) {
+            if (event.target.closest && event.target.closest('.visitor-map-widget')) {
+              setTimeout(function() {
+                if (document.activeElement && document.activeElement.blur) {
+                  document.activeElement.blur();
+                }
+              }, 0);
+            }
+          });
+        </script>
       </li>
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
@@ -129,12 +157,16 @@
 {% endif %}
     </ul>
       <div class="author__urls_sm">
+      {% if author.location %}
+        <span class="author__urls_sm-item author__urls_sm-location" title="{{ author.location }}"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i></span>
+      {% endif %}
       {% if author.uri %}
         <a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.email %}
         <a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
       {% endif %}
+        <a href="#wechat-qr-modal" class="wechat-qr-trigger author__urls_sm-wechat" title="Wechat"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i></a>
       {% if author.keybase %}
         <a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i></a>
       {% endif %}
@@ -208,7 +240,7 @@
         <a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.googlescholar %}
-        <a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i></a>
+        <a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw"></i></a>
       {% endif %}
       {% if author.pubmed %}
         <a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i></a>

@@ -6,8 +6,83 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+  .site-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    background: #fff;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.45s ease, visibility 0.45s ease;
+  }
+  .site-preloader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .no-js .site-preloader {
+    display: none;
+  }
+  .site-preloader__mark {
+    width: 46px;
+    height: 46px;
+    border: 3px solid #e6edf7;
+    border-top-color: #224b8d;
+    border-radius: 50%;
+    animation: site-preloader-spin 0.85s linear infinite;
+  }
+  .site-preloader__text {
+    color: #494e52;
+    font-size: 1.02em;
+    font-weight: bold;
+    letter-spacing: 0;
+  }
+  .site-preloader__motto {
+    color: #6f767d;
+    max-width: 24em;
+    font-size: 0.96em;
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+  .site-preloader__motto--en {
+    margin-top: 2px;
+    font-size: 1.02em;
+    color: #6f767d;
+  }
+  @keyframes site-preloader-spin {
+    to { transform: rotate(360deg); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .site-preloader,
+    .site-preloader__mark {
+      transition: none;
+      animation: none;
+    }
+  }
+</style>
+
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.__hideSitePreloader = function() {
+    var preloader = document.getElementById('site-preloader');
+    if (!preloader) return;
+    preloader.classList.add('is-hidden');
+    window.setTimeout(function() {
+      if (preloader && preloader.parentNode) {
+        preloader.parentNode.removeChild(preloader);
+      }
+    }, 600);
+  };
+  window.addEventListener('load', window.__hideSitePreloader, { once: true });
+  window.setTimeout(window.__hideSitePreloader, 2500);
 </script>
 
 <!-- For all browsers -->

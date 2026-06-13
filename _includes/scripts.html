@@ -16,6 +16,15 @@
     <i class="fas fa-moon" id="darkModeIcon"></i>
 </button>
 
+<div id="wechat-qr-modal" class="wechat-qr-modal" aria-hidden="true">
+    <button type="button" class="wechat-qr-modal__backdrop" aria-label="Close Wechat QR code"></button>
+    <div class="wechat-qr-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="wechat-qr-title">
+        <button type="button" class="wechat-qr-modal__close" aria-label="Close Wechat QR code">&times;</button>
+        <h3 id="wechat-qr-title">Wechat</h3>
+        <img src="/images/wechat-qr.png" alt="Wechat QR code for Zhongjian Zhang">
+    </div>
+</div>
+
 <script>
 // Back to Top
 const backToTop = document.getElementById('backToTop');
@@ -66,4 +75,35 @@ function copyBibtex(button) {
         }, 2000);
     });
 }
+
+// Wechat QR Modal
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('wechat-qr-modal');
+    if (!modal) return;
+
+    const openModal = (event) => {
+        event.preventDefault();
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+    };
+
+    document.querySelectorAll('.wechat-qr-trigger').forEach((trigger) => {
+        trigger.addEventListener('click', openModal);
+    });
+
+    modal.querySelectorAll('.wechat-qr-modal__backdrop, .wechat-qr-modal__close').forEach((control) => {
+        control.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
+});
 </script>

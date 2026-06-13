@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec:*)",
+      "Bash(gem install:*)",
+      "Bash(bundle install:*)",
+      "Bash(~/.gem/ruby/2.6.0/bin/bundle install:*)",
+      "Bash(sudo ~/.gem/ruby/2.6.0/bin/bundle install)",
+      "Bash(~/.gem/ruby/2.6.0/bin/bundle exec:*)",
+      "Bash(lsof -ti:4000)",
+      "Bash(xargs kill:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "WebSearch",
+      "WebFetch(domain:dblp.org)"
+    ]
+  }
+}
