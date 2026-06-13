@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 [//]: # (# 👨🏻‍🎓 About Me)
-Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of **graph foundation model**. <span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please feel free to contact me.</span>
+Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of <strong>graph foundation model</strong>. <a class="scholar-stats" href="https://scholar.google.com/citations?user=XkeONm0AAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar citations"><img class="scholar-stats__badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzhongjian-zhang%2Fzhongjian-zhang.github.io%2Fgoogle-scholar-stats%2Fgs_data_shieldsio.json&color=9db7dc&labelColor=e9e9e9&logo=googlescholar&logoColor=4285F4" alt="Google Scholar citations"></a><br /><span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please feel free to contact me.</span>
 
 <h1 id="-news" class="section-heading"><span class="section-heading__emoji">🔥</span><span class="section-heading__text">News</span></h1>
 
@@ -279,7 +279,7 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
   </article>
 </div>
 
-<h1 id="-honors-and-awards" class="section-heading awards-list"><span class="section-heading__emoji">🏆</span><span class="section-heading__text">Honors and Awards</span></h1>
+<h1 id="-honors-and-awards" class="section-heading awards-list"><span class="section-heading__emoji">🎖</span><span class="section-heading__text">Honors and Awards</span></h1>
 
 <div class="award-list">
   <div class="award-item"><span class="award-index">1</span><span class="award-title">CAST PhD Support Program, Youth Talent Development Initiative</span><span class="award-year">2025</span></div>
@@ -327,7 +327,7 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
       <div class="experience-heading">
         <div>
           <div class="experience-title">China Telecommunications Corporation</div>
-          <div class="experience-location">China, Shanghai</div>
+          <div class="experience-location">Shanghai, China</div>
         </div>
       </div>
       <div class="experience-detail"><span>Research intern</span><strong>Financial Risk Service</strong></div>
@@ -337,13 +337,13 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
   <article class="experience-item">
     <div class="experience-side">
       <div class="experience-time">2025.12 - Now</div>
-      <span class="experience-logo-wrap"><img class="experience-logo experience-logo--wide" src="/images/HKUST-GZ.png" alt="HKUST Guangzhou logo"></span>
+      <span class="experience-logo-wrap"><img class="experience-logo experience-logo--wide" src="/images/HKUST-GZ.svg" alt="HKUST Guangzhou logo"></span>
     </div>
     <div class="experience-body">
       <div class="experience-heading">
         <div>
           <div class="experience-title">Hong Kong University of Science and Technology (Guangzhou)</div>
-          <div class="experience-location">China, Guangzhou</div>
+          <div class="experience-location">Guangzhou, China</div>
         </div>
       </div>
       <div class="experience-detail"><span>Research intern</span><strong>Graph Foundation Model, Large Language Model</strong></div>

@@ -276,77 +276,6 @@ h1:before, .anchor:before {
     background-color: #16213e;
 }
 
-.site-preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    padding: 24px;
-    background: #fff;
-    text-align: center;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.45s ease, visibility 0.45s ease;
-}
-
-.site-preloader.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.no-js .site-preloader {
-    display: none;
-}
-
-.site-preloader__mark {
-    width: 46px;
-    height: 46px;
-    border: 3px solid #e6edf7;
-    border-top-color: #224b8d;
-    border-radius: 50%;
-    animation: site-preloader-spin 0.85s linear infinite;
-}
-
-.site-preloader__text {
-    color: #494e52;
-    font-size: 1.02em;
-    font-weight: bold;
-    letter-spacing: 0;
-}
-
-.site-preloader__motto {
-    color: #6f767d;
-    max-width: 24em;
-    font-size: 0.96em;
-    line-height: 1.45;
-    letter-spacing: 0;
-}
-
-.site-preloader__motto--en {
-    margin-top: 2px;
-    font-size: 1.02em;
-    color: #6f767d;
-}
-
-@keyframes site-preloader-spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .site-preloader,
-    .site-preloader__mark {
-        transition: none;
-        animation: none;
-    }
-}
-
 /* Awards list - year right aligned */
 .award-item {
     display: flex;
@@ -407,7 +336,7 @@ h1:before, .anchor:before {
 .paper-header::before {
     content: counter(paper);
     position: absolute;
-    top: 0.08rem;
+    top: 0.02rem;
     left: 0;
     display: inline-flex;
     align-items: center;
@@ -562,7 +491,7 @@ h1:before, .anchor:before {
 
     .paper-header::before {
         position: absolute;
-        top: 0.08rem;
+        top: 0;
         left: 0;
         width: 1.2rem;
         height: 1.2rem;
@@ -658,6 +587,29 @@ a:focus-visible {
     color: #e0e0e0;
 }
 
+.scholar-stats {
+    display: inline-block;
+    align-items: center;
+    margin-left: 0.34rem;
+    line-height: 1.35;
+    vertical-align: 0.08em;
+}
+
+.scholar-stats img {
+    display: inline-block;
+    height: 1.15rem;
+    max-width: none;
+    border: 0;
+    vertical-align: -0.18em;
+}
+
+@media (max-width: 480px) {
+    .scholar-stats {
+        margin-left: 0;
+        margin-top: 0.25rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .sidebar .profile_box {
         display: block;
@@ -723,13 +675,20 @@ a:focus-visible {
         line-height: 1.3;
     }
 
-    .sidebar .author__urls a {
+    .sidebar .author__urls a,
+    .sidebar .author__urls button {
         display: inline-flex;
         align-items: center;
         justify-content: flex-start;
         gap: 0.42rem;
         margin-bottom: 0;
         padding: 0.08rem 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+        text-align: left;
     }
 
     .sidebar .author__urls li > i {
@@ -913,7 +872,6 @@ a:focus-visible {
     padding: 1rem;
 }
 
-.wechat-qr-modal:target,
 .wechat-qr-modal.is-open {
     display: flex;
 }
@@ -1193,15 +1151,16 @@ a:focus-visible {
     }
 
     .award-item {
-        grid-template-columns: 1.2rem minmax(0, 1fr);
-        gap: 0.5rem;
+        grid-template-columns: 1.2rem minmax(0, 1fr) auto;
+        gap: 0.42rem;
         padding: 0.38rem 0.15rem;
     }
 
     .award-year {
-        grid-column: 2;
-        justify-self: start;
-        margin-top: -0.12rem;
+        grid-column: auto;
+        justify-self: end;
+        margin-top: 0;
+        padding-right: 0;
     }
 }
 
@@ -1422,9 +1381,10 @@ a:focus-visible {
 }
 
 .experience-detail {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 0.45rem;
+    display: grid;
+    grid-template-columns: 7.2rem minmax(0, 1fr);
+    column-gap: 0.75rem;
+    row-gap: 0.12rem;
     align-items: baseline;
     margin-top: 0.22rem;
     color: #475569;
@@ -1433,16 +1393,17 @@ a:focus-visible {
 }
 
 .experience-detail span {
-    min-width: 4.8rem;
     color: #64748b;
     font-size: 0.72rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .experience-detail strong,
 .experience-detail a {
+    min-width: 0;
     font-weight: 700;
 }
 
@@ -1470,7 +1431,6 @@ a:focus-visible {
 
     .experience-detail span {
         min-width: 0;
-        flex-basis: 100%;
     }
 }
 
@@ -1676,12 +1636,19 @@ a:focus-visible {
     }
 
     .sidebar .author__urls_sm a,
+    .sidebar .author__urls_sm button,
     .sidebar .author__urls_sm-item {
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
         width: 1.28rem !important;
         height: 1.28rem !important;
+        padding: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        color: inherit !important;
+        font: inherit !important;
+        cursor: pointer !important;
         text-decoration: none !important;
     }
 }

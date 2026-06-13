@@ -27,7 +27,8 @@ $(document).ready(function(){
   $(".sticky").Stickyfill();
 
   var stickySideBar = function(){
-    var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 925 : !$(".author__urls-wrapper button").is(":visible");
+    var $authorUrlsToggle = $(".author__urls-wrapper > button");
+    var show = $authorUrlsToggle.length === 0 ? $(window).width() > 925 : !$authorUrlsToggle.is(":visible");
     // console.log("has button: " + $(".author__urls-wrapper button").length === 0);
     // console.log("Window Width: " + windowWidth);
     // console.log("show: " + show);
@@ -52,9 +53,9 @@ $(document).ready(function(){
 
   // Follow menu drop down
 
-  $(".author__urls-wrapper button").on("click", function() {
+  $(".author__urls-wrapper > button").on("click", function() {
     $(".author__urls").fadeToggle("fast", function() {});
-    $(".author__urls-wrapper button").toggleClass("open");
+    $(".author__urls-wrapper > button").toggleClass("open");
   });
 
   // init smooth scroll

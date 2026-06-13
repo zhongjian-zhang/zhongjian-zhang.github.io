@@ -32,7 +32,7 @@
         <li class="author__contact-item"><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
       {% endif %}
       <li class="author__contact-item">
-        <a href="#wechat-qr-modal" class="wechat-qr-trigger"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i> Wechat</a>
+        <button type="button" class="wechat-qr-trigger"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i> Wechat</button>
       </li>
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
@@ -135,15 +135,40 @@
         </style>
         <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=G6lQw4EiIgWrEwcK85Zjd7wq7FDH5APYDSQ3dq0BSWw"></script>
         <script>
-          document.addEventListener('click', function(event) {
-            if (event.target.closest && event.target.closest('.visitor-map-widget')) {
-              setTimeout(function() {
-                if (document.activeElement && document.activeElement.blur) {
-                  document.activeElement.blur();
-                }
-              }, 0);
+          (function() {
+            var visitorMapUrl = 'https://mapmyvisitors.com/web/1c5bm';
+
+            function bindVisitorMapLink() {
+              var link = document.getElementById('mmvst_a');
+              if (!link) return false;
+              link.href = visitorMapUrl;
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              link.setAttribute('aria-label', 'View visitor map');
+              return true;
             }
-          });
+
+            if (!bindVisitorMapLink()) {
+              var observer = new MutationObserver(function() {
+                if (bindVisitorMapLink()) observer.disconnect();
+              });
+              observer.observe(document.querySelector('.visitor-map-widget'), {
+                childList: true,
+                subtree: true
+              });
+            }
+
+            document.addEventListener('click', function(event) {
+              if (event.target.closest && event.target.closest('.visitor-map-widget')) {
+                bindVisitorMapLink();
+                setTimeout(function() {
+                  if (document.activeElement && document.activeElement.blur) {
+                    document.activeElement.blur();
+                  }
+                }, 0);
+              }
+            });
+          })();
         </script>
       </li>
       {% if author.pubmed %}
@@ -166,7 +191,7 @@
       {% if author.email %}
         <a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
       {% endif %}
-        <a href="#wechat-qr-modal" class="wechat-qr-trigger author__urls_sm-wechat" title="Wechat"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i></a>
+        <button type="button" class="wechat-qr-trigger author__urls_sm-wechat" title="Wechat"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i></button>
       {% if author.keybase %}
         <a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i></a>
       {% endif %}
