@@ -9,7 +9,11 @@
             var totalCitation = data['citedby']
             var totalCitationEl = document.getElementById('total_cit');
             if (totalCitationEl) {
-                totalCitationEl.innerHTML = totalCitation;
+                totalCitationEl.textContent = totalCitation;
+            }
+            var scholarCount = document.querySelector('.scholar-stats__count');
+            if (scholarCount) {
+                scholarCount.textContent = totalCitation;
             }
             var scholarBadge = document.querySelector('.scholar-stats__badge');
             if (scholarBadge && scholarBadge.dataset.badgePrefix && scholarBadge.dataset.badgeSuffix) {

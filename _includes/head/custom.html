@@ -57,19 +57,45 @@
   }
 
   .scholar-stats {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
+    overflow: hidden;
     margin-left: 0.34rem;
-    line-height: 1.35;
-    vertical-align: 0.08em;
+    border: 1px solid #dbe4f0;
+    border-radius: 999px;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none !important;
+    vertical-align: 0.02em;
   }
 
-  .scholar-stats img {
-    display: inline-block;
-    height: 1.15rem;
-    max-width: none;
-    border: 0;
-    vertical-align: -0.18em;
+  .scholar-stats__label,
+  .scholar-stats__count {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.2rem;
+  }
+
+  .scholar-stats__label {
+    gap: 0.22rem;
+    padding: 0 0.44rem 0 0.42rem;
+    background: #f3f6fa;
+  }
+
+  .scholar-stats__icon {
+    color: #4285f4;
+    font-size: 0.82rem;
+    line-height: 1;
+  }
+
+  .scholar-stats__count {
+    padding: 0 0.48rem;
+    background: #d9e5f4;
+    color: #334155;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
   }
 
   @media (max-width: 480px) {
@@ -77,6 +103,16 @@
       margin-left: 0;
       margin-top: 0.25rem;
     }
+  }
+
+  [data-theme="dark"] .scholar-stats__label {
+    background: #334155;
+    color: #e5e7eb;
+  }
+
+  [data-theme="dark"] .scholar-stats__count {
+    background: #5b7ead;
+    color: #f8fafc;
   }
 
   .paper-list {
@@ -100,17 +136,16 @@
   .paper-header {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: 0.48rem;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 0.38rem;
     align-items: start;
     justify-content: initial;
   }
 
   .paper-header::before {
     content: counter(paper);
-    position: absolute;
-    top: 0.02rem;
-    left: 0;
+    grid-column: 1;
+    grid-row: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -122,6 +157,8 @@
     font-size: 0.64rem;
     font-weight: 700;
     line-height: 1;
+    align-self: start;
+    margin-top: 0.03rem;
   }
 
   .paper-item::before {
@@ -129,8 +166,9 @@
   }
 
   .paper-title {
+    grid-column: 2;
+    grid-row: 1;
     min-width: 0;
-    text-indent: 1.42rem;
     color: #1f2937;
     font-size: 0.9rem;
     font-weight: 700;
@@ -138,8 +176,11 @@
   }
 
   .paper-badge {
+    grid-column: 3;
+    grid-row: 1;
     justify-self: end;
     align-self: start;
+    white-space: nowrap;
     padding: 0.12rem 0.44rem;
     border: 1px solid #fecaca;
     border-radius: 999px;
@@ -258,8 +299,8 @@
 
     .paper-header {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      column-gap: 0.45rem;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      column-gap: 0.35rem;
       row-gap: 0;
       align-items: start;
       justify-content: initial;
@@ -267,24 +308,20 @@
     }
 
     .paper-header::before {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 1.2rem;
       height: 1.2rem;
       font-size: 0.68rem;
-      margin-top: 0;
+      margin-top: 0.01rem;
     }
 
     .paper-title {
-      grid-column: 1;
+      grid-column: 2;
       grid-row: 1;
       min-width: 0;
-      text-indent: 1.55rem;
     }
 
     .paper-badge {
-      grid-column: 2;
+      grid-column: 3;
       grid-row: 1;
       justify-self: end;
       align-self: start;
