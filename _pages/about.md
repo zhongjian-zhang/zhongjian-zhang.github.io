@@ -320,22 +320,6 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
 <div class="experience-list">
   <article class="experience-item">
     <div class="experience-side">
-      <div class="experience-time">2024.06 - 2025.02</div>
-      <span class="experience-logo-wrap"><img class="experience-logo" src="/images/Chinatelecom_logo.png" alt="China Telecom logo"></span>
-    </div>
-    <div class="experience-body">
-      <div class="experience-heading">
-        <div>
-          <div class="experience-title">China Telecommunications Corporation</div>
-          <div class="experience-location">Shanghai, China</div>
-        </div>
-      </div>
-      <div class="experience-detail"><span>Research intern</span><strong>Financial Risk Service</strong></div>
-      <div class="experience-detail"><span>Mentor</span><a href="https://scholar.google.com/citations?hl=zh-CN&user=8Qokm1IAAAAJ">Mengmei Zhang</a></div>
-    </div>
-  </article>
-  <article class="experience-item">
-    <div class="experience-side">
       <div class="experience-time">2025.12 - Now</div>
       <span class="experience-logo-wrap"><img class="experience-logo experience-logo--wide" src="/images/HKUST-GZ.svg" alt="HKUST Guangzhou logo"></span>
     </div>
@@ -348,6 +332,38 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
       </div>
       <div class="experience-detail"><span>Research intern</span><strong>Graph Foundation Model, Large Language Model</strong></div>
       <div class="experience-detail"><span>Mentor</span><a href="https://sites.google.com/view/lijia">Jia Li</a></div>
+    </div>
+  </article>
+  <article class="experience-item">
+    <div class="experience-side">
+      <div class="experience-time">2024.06 - 2025.02</div>
+      <span class="experience-logo-wrap"><img class="experience-logo" src="/images/Chinatelecom_logo.png" alt="China Telecom logo"></span>
+    </div>
+    <div class="experience-body">
+      <div class="experience-heading">
+        <div>
+          <div class="experience-title">China Telecommunications Corporation</div>
+          <div class="experience-location">Shanghai, China</div>
+        </div>
+      </div>
+      <div class="experience-detail"><span>Research intern</span><strong>Financial Risk Service, Generative Foundation Model</strong></div>
+      <div class="experience-detail"><span>Mentor</span><a href="https://scholar.google.com/citations?hl=zh-CN&user=8Qokm1IAAAAJ">Mengmei Zhang</a></div>
+    </div>
+  </article>
+  <article class="experience-item">
+    <div class="experience-side">
+      <div class="experience-time">2023.12 - 2024.05</div>
+      <span class="experience-logo-wrap"><img class="experience-logo experience-logo--wide" src="/images/lehigh_university_logo.png" alt="Lehigh University logo"></span>
+    </div>
+    <div class="experience-body">
+      <div class="experience-heading">
+        <div>
+          <div class="experience-title">Lehigh University</div>
+          <div class="experience-location">Online</div>
+        </div>
+      </div>
+      <div class="experience-detail"><span>Research intern</span><strong>Graph Adversarial Robustness, Large Language Model</strong></div>
+      <div class="experience-detail"><span>Mentor</span><a href="https://lichao-sun.github.io/">Licao Sun</a></div>
     </div>
   </article>
 </div>

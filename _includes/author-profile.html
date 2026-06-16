@@ -132,41 +132,120 @@
           .visitor-map-widget img {
             border: 0 !important;
           }
+          .visitor-map-widget .mapmyvisitors-visitors {
+            display: none !important;
+          }
+          .visitor-map-widget {
+            position: relative;
+          }
+          .visitor-map-widget #mapmyvisitors-widget {
+            cursor: default !important;
+            display: block !important;
+            min-height: 0 !important;
+            overflow: hidden !important;
+          }
+          .visitor-map-widget #mapmyvisitors-widget .mapmyvisitors-map {
+            cursor: pointer !important;
+          }
         </style>
-        <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=G6lQw4EiIgWrEwcK85Zjd7wq7FDH5APYDSQ3dq0BSWw"></script>
         <script>
           (function() {
             var visitorMapUrl = 'https://mapmyvisitors.com/web/1c5bm';
+            var visitorMapLightColor = 'b8d3e8';
+            var visitorMapDarkColor = '22384f';
+            var visitorMapToken = 'WVt8R54bmVSDXAUqL3mwh7AcjjxrxK9rz5eti0oynxY';
 
-            function bindVisitorMapLink() {
-              var link = document.getElementById('mmvst_a');
-              if (!link) return false;
-              link.href = visitorMapUrl;
-              link.target = '_blank';
-              link.rel = 'noopener noreferrer';
-              link.setAttribute('aria-label', 'View visitor map');
+            function getVisitorMapColor() {
+              return document.documentElement.getAttribute('data-theme') === 'dark' ?
+                visitorMapDarkColor :
+                visitorMapLightColor;
+            }
+
+            function getVisitorMapScriptSrc() {
+              return 'https://mapmyvisitors.com/map.js?cl=ffffff&w=200&t=n&d=' +
+                visitorMapToken +
+                '&co=' +
+                getVisitorMapColor();
+            }
+
+            function isVisitorMapClickInsideMap(event, widget) {
+              var map = widget.querySelector('.mapmyvisitors-map');
+              if (!map) return true;
+              var rect = map.getBoundingClientRect();
+              return event.clientX >= rect.left &&
+                event.clientX <= rect.right &&
+                event.clientY >= rect.top &&
+                event.clientY <= rect.bottom;
+            }
+
+            function trimVisitorMapHitArea(widget) {
+              var map = widget.querySelector('.mapmyvisitors-map');
+              if (!map) return;
+              widget.style.setProperty('height', map.getBoundingClientRect().height + 'px', 'important');
+            }
+
+            function sanitizeVisitorMapWidget() {
+              var widget = document.getElementById('mapmyvisitors-widget');
+              if (!widget) return false;
+              if (widget.getAttribute('href') !== visitorMapUrl) {
+                widget.href = visitorMapUrl;
+              }
+              if (widget.getAttribute('target') !== '_blank') {
+                widget.target = '_blank';
+              }
+              if (widget.getAttribute('rel') !== 'noopener noreferrer') {
+                widget.rel = 'noopener noreferrer';
+              }
+              if (widget.dataset.blankAreaGuardBound !== 'true') {
+                widget.dataset.blankAreaGuardBound = 'true';
+                widget.addEventListener('click', function(event) {
+                  if (!isVisitorMapClickInsideMap(event, widget)) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                }, true);
+              }
+              trimVisitorMapHitArea(widget);
               return true;
             }
 
-            if (!bindVisitorMapLink()) {
-              var observer = new MutationObserver(function() {
-                if (bindVisitorMapLink()) observer.disconnect();
-              });
-              observer.observe(document.querySelector('.visitor-map-widget'), {
+            function loadVisitorMapScript() {
+              var visitorMapWidget = document.querySelector('.visitor-map-widget');
+              if (!visitorMapWidget) return;
+
+              var existingWidget = document.getElementById('mapmyvisitors-widget');
+              if (existingWidget) existingWidget.remove();
+
+              var existingScript = document.getElementById('mapmyvisitors');
+              if (existingScript) existingScript.remove();
+
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.id = 'mapmyvisitors';
+              script.src = getVisitorMapScriptSrc();
+              visitorMapWidget.appendChild(script);
+              setTimeout(sanitizeVisitorMapWidget, 100);
+              setTimeout(sanitizeVisitorMapWidget, 500);
+              setTimeout(sanitizeVisitorMapWidget, 1000);
+            }
+
+            function bindVisitorMap() {
+              var visitorMapWidget = document.querySelector('.visitor-map-widget');
+              if (!visitorMapWidget) return;
+
+              var observer = new MutationObserver(sanitizeVisitorMapWidget);
+              observer.observe(visitorMapWidget, {
                 childList: true,
                 subtree: true
               });
+              loadVisitorMapScript();
             }
 
-            document.addEventListener('click', function(event) {
-              if (event.target.closest && event.target.closest('.visitor-map-widget')) {
-                bindVisitorMapLink();
-                setTimeout(function() {
-                  if (document.activeElement && document.activeElement.blur) {
-                    document.activeElement.blur();
-                  }
-                }, 0);
-              }
+            bindVisitorMap();
+
+            new MutationObserver(loadVisitorMapScript).observe(document.documentElement, {
+              attributes: true,
+              attributeFilter: ['data-theme']
             });
           })();
         </script>
