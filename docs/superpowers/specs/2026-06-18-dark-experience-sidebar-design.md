@@ -18,10 +18,13 @@ changing their content, order, or mobile information architecture.
 - Move the desktop contact rows slightly to the right so their icon and text
   columns align visually with the profile content above.
 - Keep the visitor map centered independently of the contact-row offset.
-- Render the visit count in compact notation such as `32.7K` or `10.3M` so
-  the row remains stable at large values.
-- Treat the counter as traffic reported by the external counter service, not as
-  a verified count of unique visitors.
+- Render the unmodified Busuanzi site page-view count on the production
+  `zhongjian-zhang.github.io` hostname.
+- Render `-----` on `localhost` and `127.0.0.1`, because Busuanzi groups
+  those shared development hostnames into unrelated public counters.
+- Do not abbreviate the production count with `K` or `M` suffixes.
+- Treat the counter as page views reported by the external counter service,
+  not as a verified count of unique visitors.
 
 ## Validation
 
