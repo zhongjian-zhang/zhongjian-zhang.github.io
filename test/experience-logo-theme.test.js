@@ -19,3 +19,12 @@ test('dark experience logos use a layout-neutral outline', () => {
     assert.match(rule[1], /box-shadow:\s*inset\s+0\s+0\s+0\s+1px/, `${relativePath} lacks a layout-neutral outline`);
   }
 });
+
+test('NUS logo has tighter vertical padding without changing other logos', () => {
+  const source = fs.readFileSync(path.join(root, 'assets/css/main.scss'), 'utf8');
+  const nusRule = source.match(/\.experience-logo-wrap\.experience-logo-wrap--nus\s*\{([^}]+)\}/);
+
+  assert.ok(nusRule);
+  assert.match(nusRule[1], /padding-top:\s*0\.08rem;/);
+  assert.match(nusRule[1], /padding-bottom:\s*0\.08rem;/);
+});

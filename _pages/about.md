@@ -18,20 +18,24 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 [//]: # (# 👨🏻‍🎓 About Me)
-Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of <strong>graph foundation model</strong>. <a class="scholar-stats" href="https://scholar.google.com/citations?user=XkeONm0AAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar citations"><span class="scholar-stats__label"><i class="ai ai-google-scholar scholar-stats__icon" aria-hidden="true"></i>citations</span><span id="total_cit" class="scholar-stats__count">137</span></a><br /><span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please feel free to contact me.</span>
+Hello everyone, my name is Zhongjian Zhang. Currently, I am a fourth-year Ph.D. student from Beijing University of Posts and Telecommunications (BUPT), supervised by [Prof. Chuan Shi](http://www.shichuan.org/ShiChuan_ch.html). My research interests primary focus on large language models and trustworthy graph machine learning. Specifically, my current research is mainly about the development of <strong>graph foundation model</strong>. <a class="scholar-stats" href="https://scholar.google.com/citations?user=XkeONm0AAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar citations"><span class="scholar-stats__label"><i class="ai ai-google-scholar scholar-stats__icon" aria-hidden="true"></i>citations</span><span id="total_cit" class="scholar-stats__count">137</span></a><br /><span style="color: green;">If you have any questions regarding my work or are interested in collaborating with me, please feel free to contact me.</span>
 
 <h1 id="-news" class="section-heading"><span class="section-heading__emoji">🔥</span><span class="section-heading__text">News</span></h1>
 
 <div class="news-timeline">
+  <div class="news-item news-item--featured">
+    <div class="news-date">2026.08</div>
+    <div class="news-content">💼 I began joint Ph.D. training at the National University of Singapore, supervised by <a href="https://bhooi.github.io/">Prof. Bryan Hooi</a>.</div>
+  </div>
   <div class="news-item news-item--featured">
     <div class="news-date">2026.03</div>
     <div class="news-content">🎉 Our papers <a href="https://dl.acm.org/doi/10.1145/3774904.3792832">FRiskGPT</a> and <a href="https://arxiv.org/abs/2603.01385">RGLM</a> are accepted to WWW 2026.</div>
   </div>
   <div class="news-item news-item--featured">
     <div class="news-date">2025.12</div>
-    <div class="news-content">💼 I join the Hong Kong University of Science and Technology (Guangzhou) as a research intern, supervised by <a href="https://sites.google.com/view/lijia">Prof. Jia Li</a>.</div>
+    <div class="news-content">💼 I began a research visit at the Hong Kong University of Science and Technology (Guangzhou), supervised by <a href="https://sites.google.com/view/lijia">Prof. Jia Li</a>.</div>
   </div>
-  <div class="news-item news-item--featured">
+  <div class="news-item">
     <div class="news-date">2025.12</div>
     <div class="news-content">🎉 My research is supported by the CAS Youth Talent Training Program for PhD Students.</div>
   </div>
@@ -298,6 +302,13 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
 
 <div class="talk-list">
   <article class="talk-item">
+    <div class="talk-date">2026.07</div>
+    <div class="talk-body">
+      <div class="talk-title">FRiskGPT: A Generative Foundation Model for Financial Risk Detection</div>
+      <div class="talk-meta">CCDM 2026 · Top Conference and Journal Forum</div>
+    </div>
+  </article>
+  <article class="talk-item">
     <div class="talk-date">2025.01</div>
     <div class="talk-body">
       <div class="talk-title">Rethinking Byzantine Robustness in Federated Recommendation from Sparse Aggregation Perspective</div>
@@ -320,7 +331,23 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
 <div class="experience-list">
   <article class="experience-item">
     <div class="experience-side">
-      <div class="experience-time">2025.12 - Now</div>
+      <div class="experience-time">2026.08 - now</div>
+      <span class="experience-logo-wrap experience-logo-wrap--nus"><img class="experience-logo experience-logo--wide" src="/images/NUS.svg?v=2" alt="National University of Singapore logo"></span>
+    </div>
+    <div class="experience-body">
+      <div class="experience-heading">
+        <div>
+          <div class="experience-title">National University of Singapore</div>
+          <div class="experience-location">Singapore</div>
+        </div>
+      </div>
+      <div class="experience-detail"><span>Joint Ph.D. student</span><strong>Graph Foundation Models, Self-Evolving Agents</strong></div>
+      <div class="experience-detail"><span>Mentor</span><a href="https://bhooi.github.io/">Bryan Hooi</a></div>
+    </div>
+  </article>
+  <article class="experience-item">
+    <div class="experience-side">
+      <div class="experience-time">2025.12 - 2026.06</div>
       <span class="experience-logo-wrap"><img class="experience-logo experience-logo--wide" src="/images/HKUST-GZ.svg" alt="HKUST Guangzhou logo"></span>
     </div>
     <div class="experience-body">
@@ -330,7 +357,7 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
           <div class="experience-location">Guangzhou, China</div>
         </div>
       </div>
-      <div class="experience-detail"><span>Research intern</span><strong>Graph Foundation Model, Large Language Model</strong></div>
+      <div class="experience-detail"><span>Research visitor</span><strong>Graph Foundation Models, Cross-Domain Generalization, Agent Memory</strong></div>
       <div class="experience-detail"><span>Mentor</span><a href="https://sites.google.com/view/lijia">Jia Li</a></div>
     </div>
   </article>
@@ -362,8 +389,8 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a third-year Ph.D. s
           <div class="experience-location">Online</div>
         </div>
       </div>
-      <div class="experience-detail"><span>Research intern</span><strong>Graph Adversarial Robustness, Large Language Model</strong></div>
-      <div class="experience-detail"><span>Mentor</span><a href="https://lichao-sun.github.io/">Licao Sun</a></div>
+      <div class="experience-detail"><span>Research visitor</span><strong>Graph Adversarial Robustness, Large Language Models</strong></div>
+      <div class="experience-detail"><span>Mentor</span><a href="https://lichao-sun.github.io/">Lichao Sun</a></div>
     </div>
   </article>
 </div>
