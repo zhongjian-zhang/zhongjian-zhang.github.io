@@ -137,6 +137,50 @@ class CrawlerTests(unittest.TestCase):
 
         self.assertEqual(FailureHandler.attempts, 2)
 
+    def test_fetch_uses_fallback_when_direct_scholar_access_is_forbidden(self):
+        class ForbiddenHandler(BaseHTTPRequestHandler):
+            direct_attempts = 0
+            fallback_attempts = 0
+
+            def do_GET(self):
+                if self.path == "/direct":
+                    type(self).direct_attempts += 1
+                    self.send_response(403)
+                    self.end_headers()
+                    return
+
+                type(self).fallback_attempts += 1
+                body = PROFILE_HTML.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
+            def log_message(self, format, *args):
+                pass
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), ForbiddenHandler)
+        thread = Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            base_url = f"http://127.0.0.1:{server.server_port}"
+            html = fetch_profile(
+                f"{base_url}/direct",
+                fallback_url=f"{base_url}/fallback",
+                attempts=3,
+                timeout=1,
+                backoff=0,
+            )
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
+
+        self.assertEqual(parse_author_profile(html)["citedby"], 163)
+        self.assertEqual(ForbiddenHandler.direct_attempts, 1)
+        self.assertEqual(ForbiddenHandler.fallback_attempts, 1)
+
 
 if __name__ == "__main__":
     unittest.main()

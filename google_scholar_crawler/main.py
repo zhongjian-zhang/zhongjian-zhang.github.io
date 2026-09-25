@@ -4,6 +4,7 @@ import re
 import time
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 from urllib.parse import parse_qs, urlencode, urlparse
 
 import requests
@@ -80,6 +81,7 @@ def build_shields_data(author: dict) -> dict:
 def fetch_profile(
     url: str,
     *,
+    fallback_url: Optional[str] = None,
     attempts: int = 3,
     timeout: float = 20,
     backoff: float = 2,
@@ -95,19 +97,30 @@ def fetch_profile(
         ),
     }
     last_error = None
+    request_count = 0
+    source_urls = [url] + ([fallback_url] if fallback_url else [])
     with requests.Session() as session:
-        for attempt in range(1, attempts + 1):
-            try:
-                response = session.get(url, headers=headers, timeout=timeout)
-                response.raise_for_status()
-                return response.text
-            except requests.RequestException as error:
-                last_error = error
+        for source_index, source_url in enumerate(source_urls):
+            for attempt in range(1, attempts + 1):
+                try:
+                    request_count += 1
+                    response = session.get(source_url, headers=headers, timeout=timeout)
+                    response.raise_for_status()
+                    return response.text
+                except requests.HTTPError as error:
+                    last_error = error
+                    if error.response is not None and error.response.status_code == 403:
+                        if source_index == 0 and fallback_url:
+                            print("Direct Scholar access returned HTTP 403; trying translated profile", flush=True)
+                        break
+                except requests.RequestException as error:
+                    last_error = error
+
                 if attempt < attempts and backoff > 0:
                     time.sleep(backoff * (2 ** (attempt - 1)))
 
     raise ScholarFetchError(
-        f"Unable to fetch Google Scholar profile after {attempts} attempts: "
+        f"Unable to fetch Google Scholar profile after {request_count} attempts: "
         f"{last_error}"
     ) from last_error
 
@@ -129,7 +142,16 @@ def main() -> None:
 
     query = urlencode({"user": scholar_id, "hl": "en", "pagesize": 100})
     profile_url = f"https://scholar.google.com/citations?{query}"
-    author = parse_author_profile(fetch_profile(profile_url))
+    translated_query = urlencode({
+        "user": scholar_id,
+        "hl": "en",
+        "pagesize": 100,
+        "_x_tr_sl": "auto",
+        "_x_tr_tl": "en",
+        "_x_tr_hl": "en",
+    })
+    fallback_url = f"https://scholar-google-com.translate.goog/citations?{translated_query}"
+    author = parse_author_profile(fetch_profile(profile_url, fallback_url=fallback_url))
     print(json.dumps(author, indent=2, ensure_ascii=False))
     write_results(author, Path(__file__).resolve().parent / "results")
 
