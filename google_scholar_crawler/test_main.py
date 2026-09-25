@@ -1,6 +1,14 @@
 import unittest
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from threading import Thread
 
-from main import ScholarParseError, build_shields_data, parse_author_profile
+from main import (
+    ScholarFetchError,
+    ScholarParseError,
+    build_shields_data,
+    fetch_profile,
+    parse_author_profile,
+)
 
 
 PROFILE_HTML = """
@@ -68,6 +76,66 @@ class CrawlerTests(unittest.TestCase):
     def test_parse_author_profile_rejects_missing_citation_total(self):
         with self.assertRaisesRegex(ScholarParseError, "citation total"):
             parse_author_profile('<div id="gsc_prf_in">Zhongjian Zhang</div>')
+
+    def test_fetch_retries_are_bounded(self):
+        class RetryHandler(BaseHTTPRequestHandler):
+            attempts = 0
+
+            def do_GET(self):
+                type(self).attempts += 1
+                if type(self).attempts < 3:
+                    self.send_response(503)
+                    self.end_headers()
+                    return
+                body = PROFILE_HTML.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
+            def log_message(self, format, *args):
+                pass
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), RetryHandler)
+        thread = Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            url = f"http://127.0.0.1:{server.server_port}/profile"
+            html = fetch_profile(url, attempts=3, timeout=1, backoff=0)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
+
+        self.assertIn("Zhongjian Zhang", html)
+        self.assertEqual(RetryHandler.attempts, 3)
+
+    def test_fetch_reports_failure_after_configured_attempts(self):
+        class FailureHandler(BaseHTTPRequestHandler):
+            attempts = 0
+
+            def do_GET(self):
+                type(self).attempts += 1
+                self.send_response(503)
+                self.end_headers()
+
+            def log_message(self, format, *args):
+                pass
+
+        server = ThreadingHTTPServer(("127.0.0.1", 0), FailureHandler)
+        thread = Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        try:
+            url = f"http://127.0.0.1:{server.server_port}/profile"
+            with self.assertRaisesRegex(ScholarFetchError, "after 2 attempts"):
+                fetch_profile(url, attempts=2, timeout=1, backoff=0)
+        finally:
+            server.shutdown()
+            server.server_close()
+            thread.join()
+
+        self.assertEqual(FailureHandler.attempts, 2)
 
 
 if __name__ == "__main__":

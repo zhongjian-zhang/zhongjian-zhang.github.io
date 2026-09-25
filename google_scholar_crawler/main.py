@@ -1,15 +1,21 @@
 import json
 import os
 import re
+import time
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urlencode, urlparse
 
+import requests
 from bs4 import BeautifulSoup
 
 
 class ScholarParseError(ValueError):
     """Raised when a Google Scholar profile response is incomplete."""
+
+
+class ScholarFetchError(RuntimeError):
+    """Raised when a Google Scholar profile cannot be fetched in time."""
 
 
 def _integer(text: str) -> int:
@@ -71,6 +77,41 @@ def build_shields_data(author: dict) -> dict:
     }
 
 
+def fetch_profile(
+    url: str,
+    *,
+    attempts: int = 3,
+    timeout: float = 20,
+    backoff: float = 2,
+) -> str:
+    if attempts < 1:
+        raise ValueError("attempts must be at least 1")
+
+    headers = {
+        "Accept-Language": "en-US,en;q=0.9",
+        "User-Agent": (
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+        ),
+    }
+    last_error = None
+    with requests.Session() as session:
+        for attempt in range(1, attempts + 1):
+            try:
+                response = session.get(url, headers=headers, timeout=timeout)
+                response.raise_for_status()
+                return response.text
+            except requests.RequestException as error:
+                last_error = error
+                if attempt < attempts and backoff > 0:
+                    time.sleep(backoff * (2 ** (attempt - 1)))
+
+    raise ScholarFetchError(
+        f"Unable to fetch Google Scholar profile after {attempts} attempts: "
+        f"{last_error}"
+    ) from last_error
+
+
 def write_results(author: dict, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     with (output_dir / "gs_data.json").open("w", encoding="utf-8") as outfile:
@@ -82,19 +123,15 @@ def write_results(author: dict, output_dir: Path) -> None:
 
 
 def main() -> None:
-    from scholarly import scholarly
+    scholar_id = os.environ.get("GOOGLE_SCHOLAR_ID", "").strip()
+    if not scholar_id:
+        raise RuntimeError("GOOGLE_SCHOLAR_ID is required")
 
-    author = scholarly.search_author_id(os.environ["GOOGLE_SCHOLAR_ID"])
-    scholarly.fill(
-        author, sections=["basics", "indices", "counts", "publications"]
-    )
-    author["updated"] = str(datetime.now())
-    author["publications"] = {
-        publication["author_pub_id"]: publication
-        for publication in author["publications"]
-    }
-    print(json.dumps(author, indent=2, default=str))
-    write_results(author, Path("results"))
+    query = urlencode({"user": scholar_id, "hl": "en", "pagesize": 100})
+    profile_url = f"https://scholar.google.com/citations?{query}"
+    author = parse_author_profile(fetch_profile(profile_url))
+    print(json.dumps(author, indent=2, ensure_ascii=False))
+    write_results(author, Path(__file__).resolve().parent / "results")
 
 
 if __name__ == "__main__":
