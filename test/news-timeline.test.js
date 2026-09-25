@@ -16,7 +16,7 @@ test('only the first three News items have the featured weight', () => {
   const news = page.split('<div class="news-timeline">')[1].split('</div>\n\n<h1 id="-publications"')[0];
   const items = [...news.matchAll(/class="news-item(?: news-item--featured)?"/g)];
 
-  assert.equal(items.length, 10);
+  assert.equal(items.length, 11);
   assert.deepEqual(items.map((item) => item[0].includes('news-item--featured')).slice(0, 5), [true, true, true, false, false]);
 
   for (const relativePath of ['assets/css/main.scss', '_includes/head/custom.html']) {

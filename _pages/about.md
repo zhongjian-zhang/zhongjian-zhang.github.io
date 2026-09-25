@@ -24,6 +24,10 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a fourth-year Ph.D. 
 
 <div class="news-timeline">
   <div class="news-item news-item--featured">
+    <div class="news-date">2026.09</div>
+    <div class="news-content">🎉 Our paper <a href="https://arxiv.org/abs/2605.18421">EvoMemBench</a> is accepted to the NeurIPS 2026 Evaluations &amp; Datasets Track.</div>
+  </div>
+  <div class="news-item news-item--featured">
     <div class="news-date">2026.08</div>
     <div class="news-content">💼 I began joint Ph.D. training at the National University of Singapore, supervised by <a href="https://bhooi.github.io/">Prof. Bryan Hooi</a>.</div>
   </div>
@@ -31,7 +35,7 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a fourth-year Ph.D. 
     <div class="news-date">2026.03</div>
     <div class="news-content">🎉 Our papers <a href="https://dl.acm.org/doi/10.1145/3774904.3792832">FRiskGPT</a> and <a href="https://arxiv.org/abs/2603.01385">RGLM</a> are accepted to WWW 2026.</div>
   </div>
-  <div class="news-item news-item--featured">
+  <div class="news-item">
     <div class="news-date">2025.12</div>
     <div class="news-content">💼 I began a research visit at the Hong Kong University of Science and Technology (Guangzhou), supervised by <a href="https://sites.google.com/view/lijia">Prof. Jia Li</a>.</div>
   </div>
@@ -68,6 +72,26 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a fourth-year Ph.D. 
 <h1 id="-publications" class="section-heading"><span class="section-heading__emoji">📝</span><span class="section-heading__text">Publications</span></h1>
 
 <div class="paper-list">
+  <article class="paper-item">
+    <div class="paper-header">
+      <div class="paper-title">EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective</div>
+      <span class="paper-badge">CCF-A</span>
+    </div>
+    <div class="paper-authors">Yuyao Wang, <strong>Zhongjian Zhang*</strong>, Mo Chi, Kaichi Yu, Yuhan Li, Miao Peng, Bing Tong, Chen Zhang, Yan Zhou, Jia Li</div>
+    <div class="paper-meta">NeurIPS'26 · Evaluations &amp; Datasets Track</div>
+    <div class="paper-links">
+      <a href="https://arxiv.org/abs/2605.18421">Paper</a>
+      <a href="https://github.com/DSAIL-Memory/EvoMemBench">Code</a>
+      <button class="bibtex-btn paper-link-button" data-bibtex="bibtex-evomembench26" onclick="copyBibtex(this)">BibTeX</button>
+    </div>
+   {% raw %}<pre id="bibtex-evomembench26" class="bibtex-content">@article{wang2026evomembench,
+  title   = {EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective},
+  author  = {Wang, Yuyao and Zhang, Zhongjian and Chi, Mo and Yu, Kaichi and Li, Yuhan and Peng, Miao and Tong, Bing and Zhang, Chen and Zhou, Yan and Li, Jia},
+  journal = {arXiv preprint arXiv:2605.18421},
+  year    = {2026}
+}</pre>{% endraw %}
+  </article>
+
   <article class="paper-item">
     <div class="paper-header">
       <div class="paper-title">FRiskGPT: A Generative Foundation Model for Financial Risk Detection</div>
