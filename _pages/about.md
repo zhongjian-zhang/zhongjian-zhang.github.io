@@ -69,7 +69,7 @@ Hello everyone, my name is Zhongjian Zhang. Currently, I am a fourth-year Ph.D. 
   </div>
 </div>
 
-<h1 id="-publications" class="section-heading"><span class="section-heading__emoji">📝</span><span class="section-heading__text">Publications</span></h1>
+<h1 id="-publications" class="section-heading"><span class="section-heading__emoji">📝</span><span class="section-heading__text">Publications</span><span class="section-heading__note">* Equal contribution</span></h1>
 
 <div class="paper-list">
   <article class="paper-item">

@@ -51,9 +51,30 @@
     flex: 1;
   }
 
+  .section-heading__note {
+    flex: 0 0 auto;
+    margin-left: auto;
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: #7b8491;
+    line-height: 1.2;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
   [data-theme="dark"] .page__content .section-heading {
     border-bottom-color: #2a2a4e;
     color: #e0e0e0;
+  }
+
+  [data-theme="dark"] .section-heading__note {
+    color: #aeb8c7;
+  }
+
+  @media (max-width: 480px) {
+    .section-heading__note {
+      font-size: 0.62rem;
+    }
   }
 
   .scholar-stats {
