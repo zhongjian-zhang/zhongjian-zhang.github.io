@@ -32,3 +32,10 @@ test('citation workflow exposes install, fetch, validation, and publish steps', 
     /cd \.\/google_scholar_crawler\s+pip3 install[\s\S]+python3 main\.py/,
   );
 });
+
+test('daily workflow uses the API without extra page-build queries or ignored failures', () => {
+  assert.match(workflow, /SERPAPI_API_KEY: \$\{\{ secrets\.SERPAPI_API_KEY \}\}/);
+  assert.match(workflow, /SCHOLAR_SOURCE: serpapi/);
+  assert.doesNotMatch(workflow, /page_build:|continue-on-error:|--force/);
+  assert.match(workflow, /python -m unittest/);
+});

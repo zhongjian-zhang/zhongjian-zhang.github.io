@@ -1,0 +1,18 @@
+.citation-update-status {
+  display: inline-block;
+  margin-left: 0.35rem;
+  color: #64748b;
+  font-size: 0.65rem;
+
+  &.is-stale {
+    color: #9a4700;
+  }
+}
+
+[data-theme="dark"] .citation-update-status {
+  color: #cbd5e1;
+
+  &.is-stale {
+    color: #fbbf24;
+  }
+}
